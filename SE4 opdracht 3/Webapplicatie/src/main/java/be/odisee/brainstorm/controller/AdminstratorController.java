@@ -29,10 +29,12 @@ public class AdminstratorController {
     }
     // je zal naar index.jsp gaan
     int idUser;
+    String username;
     @RequestMapping(value={"/admin/persoon.html"},method=RequestMethod.GET)
     public String persoonDetail(@RequestParam("id") Integer id, ModelMap model){
     	idUser = id;
         Gebruiker persoon = brainstormSessieService.zoekPersoonMetId(id);
+        username = persoon.getEmailadres();
         model.addAttribute("persoon", persoon);
         return "/admin/persoon";
     }
@@ -80,7 +82,7 @@ public class AdminstratorController {
     
     @RequestMapping(value={"/admin/grantCommunity.html"},method=RequestMethod.GET)
     public String grantCommunity( ModelMap model) {
-    	brainstormSessieService.inserRights(idUser, "Community");
+    	brainstormSessieService.inserRights(idUser, "Community", username);
        // Rol toegevoegdeRol = brainstormSessieService.voegRolToe(rol.getType(), idUser, rol.getType());
 
     	return "redirect:/admin/index.html";
@@ -88,7 +90,7 @@ public class AdminstratorController {
     
     @RequestMapping(value={"/admin/grantField.html"},method=RequestMethod.GET)
     public String grantField( ModelMap model) {
-    	brainstormSessieService.inserRights(idUser, "Field");
+    	brainstormSessieService.inserRights(idUser, "Field", username);
        // Rol toegevoegdeRol = brainstormSessieService.voegRolToe(rol.getType(), idUser, rol.getType());
 
     	return "redirect:/admin/index.html";
@@ -96,7 +98,7 @@ public class AdminstratorController {
     
     @RequestMapping(value={"/admin/grantGebruiker.html"},method=RequestMethod.GET)
     public String grantGebruiker( ModelMap model) {
-    	brainstormSessieService.inserRights(idUser, "Deelnemer");
+    	brainstormSessieService.inserRights(idUser, "Deelnemer", username);
        // Rol toegevoegdeRol = brainstormSessieService.voegRolToe(rol.getType(), idUser, rol.getType());
 
     	return "redirect:/admin/index.html";
@@ -104,7 +106,7 @@ public class AdminstratorController {
     
     @RequestMapping(value={"/admin/grantAdmin.html"},method=RequestMethod.GET)
     public String grantAdmin( ModelMap model) {
-    	brainstormSessieService.inserRights(idUser, "Adminstrator");
+    	brainstormSessieService.inserRights(idUser, "Administrator", username);
        // Rol toegevoegdeRol = brainstormSessieService.voegRolToe(rol.getType(), idUser, rol.getType());
 
     	return "redirect:/admin/index.html";

@@ -120,9 +120,9 @@ public class BrainstormSessieServiceImpl implements BrainstormSessieService {
     	routeDao.routeControlOk(id);
     }
     
-    public void inserRights(int id, String rechten)
+    public void inserRights(int id, String rechten, String username)
     {
-    	rolDao.insertRol(id, rechten);
+    	rolDao.insertRol(id, rechten, username);
     }
     // TODO deze en andere operaties (ook in andere klassen
     // met een versie met id en zonder id te refactoren (dubbele code)

@@ -176,12 +176,12 @@ class HibernateDao {
     			 e.printStackTrace();
     		 }
     	 }
-    	 
-    	 protected void sessionInsertRights(int id, String rechten, String classname)
+    	  
+    	 protected void sessionInsertRights(int id, String rechten, String classname, String username)
     	 {
     		 try{
-    			 System.out.println("insert into  " + classname + " (type, status, usernaam, persoon_id) values ( '" + rechten + "', 'aktief', '" + rechten + "', " + id + ")");
-    			 Query q = sessionFactory.getCurrentSession().createSQLQuery("insert into  " + classname + " (type, status, usernaam, persoon_id) values ( '" + rechten + "', 'aktief', 'test', " + id + ")"); 
+    			 System.out.println("insert into  " + classname + " (type, status, usernaam, persoon_id) values ( '" + rechten + "', 'aktief', '" + username + "', " + id + ")");
+    			 Query q = sessionFactory.getCurrentSession().createSQLQuery("insert into  " + classname + " (type, status, usernaam, persoon_id) values ( '" + rechten + "', 'aktief', '" + username + "', " + id + ")"); 
     			 q.executeUpdate();    		 }
     		 catch (Exception e){
     			 e.printStackTrace();

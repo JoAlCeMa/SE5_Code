@@ -48,6 +48,6 @@ public interface BrainstormSessieService {
     
     public void routecontrolOk(int id);
     
-    public void inserRights(int id, String rechten);
+    public void inserRights(int id, String rechten, String username);
     
 }

@@ -25,7 +25,7 @@
         <c:url var="field" value="/admin/grantField.html" />
         <c:url var="rights" value="/admin/rechten.html">
         </c:url>
-        <a href='<c:out value="${rights}"/>'> Rechten </a>
+        <a href='<c:out value="${community}"/>'> Community rechten </a>
         <br/>
         <a href='<c:out value="${admin}"/>'> Admin rechten </a>
         <br>

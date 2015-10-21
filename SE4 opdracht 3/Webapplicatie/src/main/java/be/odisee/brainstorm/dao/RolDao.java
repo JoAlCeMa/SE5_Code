@@ -10,6 +10,6 @@ public interface RolDao {
 
     public Rol getRolByUserid(String userid);
     
-    public void insertRol(int id, String rechten);
+    public void insertRol(int id, String rechten, String username);
 
 }

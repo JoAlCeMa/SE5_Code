@@ -26,9 +26,9 @@ public class RolHibernateDao extends HibernateDao implements RolDao {
         return (Rol) sessionGetObjectBy1StringParameterNamedQuery(qstr,parameter,userid);
     }
 
-    public void insertRol(int id, String rechten)
+    public void insertRol(int id, String rechten, String username)
     {
-    	sessionInsertRights(id, rechten, "rollen");
+    	sessionInsertRights(id, rechten, "rollen", username);
     }
 
 }
