@@ -8,16 +8,11 @@
     
     <body>
         <h1>Details van Gebruiker</h1>
-        <b>Id:</b>
-        <c:out value="${persoon.id}" /><br/>
-        <b>Voornaam:</b>
-        <c:out value="${persoon.voornaam}" /><br/>
-        <b>Familienaam:</b>
-        <c:out value="${persoon.familienaam}" /><br/>
-        <b>E-mailadres:</b>
-        <c:out value="${persoon.emailadres}" /><br/>
-        <b>Paswoord:</b>
-        <c:out value="${persoon.paswoord}" /><br/>
+        <b>Id:</b><span><c:out value="${persoon.id}" /></span><br/>
+        <b>Voornaam:</b><span><c:out value="${persoon.voornaam}"/></span><br/>
+        <b>Familienaam:</b><span><c:out value="${persoon.familienaam}"/></span><br/>
+        <b>E-mailadres:</b><span><c:out value="${persoon.emailadres}"/></span><br/>
+        <b>Paswoord:</b><span><c:out value="${persoon.paswoord}"/></span><br/>
         <br/>
         <c:url var="community" value="/admin/grantCommunity.html" />
         <c:url var="admin" value="/admin/grantAdmin.html" />

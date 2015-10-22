@@ -18,8 +18,8 @@ public class DataConfig {
         BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUrl("jdbc:mysql://localhost:3306/dbtomtom");
-        ds.setUsername("root");
-        ds.setPassword("ArnaudEnJoris");
+        ds.setUsername("tomtom");
+        ds.setPassword("tomtom");
         ds.setInitialSize(5);
         ds.setMaxActive(10);
         ds.setDefaultTransactionIsolation(java.sql.Connection.TRANSACTION_SERIALIZABLE);
@@ -34,7 +34,8 @@ public class DataConfig {
         sf.setPackagesToScan(new String[]{"be.odisee.brainstorm.domain"});
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("dialect", "org.hibernate.dialect.MySQLInnoDBDialect");
-        hibernateProperties.put("hibernate.hbm2ddl.auto","update");
+        hibernateProperties.put("hibernate.hbm2ddl.auto","create-drop");
+        //hibernateProperties.put("hibernate.hbm2ddl.auto","update");
         sf.setHibernateProperties(hibernateProperties);
         sf.afterPropertiesSet();                 // omdat deze configuratie wijze ...
         return (SessionFactory) sf.getObject();  // nog wat scherpe kantjes heeft

@@ -46,7 +46,7 @@ public class AdminAuthenticatedAddOnePersonTest extends SeleneseTestCase {
 		assertEquals("steve jobs", selenium.getText("//a[contains(text(),'steve\n                        jobs')]"));
 		selenium.click("link=Menu");
 		selenium.waitForPageToLoad("30000");
-	
+
 	}
 
 	@After
