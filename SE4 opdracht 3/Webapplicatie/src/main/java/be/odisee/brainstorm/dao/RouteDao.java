@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface RouteDao {
 
-    public Route saveRoute(int id, String status, String naam, double breedtegraad, double lengtegraad, String type);
+    public Route saveRoute(int id, String status, String naam, double breedtegraad, double lengtegraad, String type, double afstand);
 
-    public Route saveRoute(String string, String naam, double breedtegraad, double lengtegraad, String type);
+    public Route saveRoute(String string, String naam, double breedtegraad, double lengtegraad, String type, double afstand);
 
     public Route getRouteById(int persoonId);
 

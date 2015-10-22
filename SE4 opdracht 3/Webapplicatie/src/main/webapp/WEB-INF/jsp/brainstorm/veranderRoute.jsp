@@ -30,6 +30,10 @@
 				<form:input path="type" value="${route.type}" />
 			</div>
 			<div>
+				<label>Afstand:</label>
+				<form:input path="type" value="${route.afstand}" />
+			</div>
+			<div>
 				<input name="submit" type="submit" value="change" />
 			</div>
 		</fieldset>

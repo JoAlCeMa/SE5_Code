@@ -39,8 +39,6 @@ public interface BrainstormSessieService {
     public Route zoekRouteMetId(int id);
     
     public void veranderRoute(Route route);
-
-    public Route voegRouteToe(String naam, double breedtegraad, double lengtegraad, String type);
     
     public void verwijderRoute(int routeId);
     
@@ -49,5 +47,7 @@ public interface BrainstormSessieService {
     public void routecontrolOk(int id);
     
     public void inserRights(int id, String rechten, String username);
+
+	public Route voegRouteToe(String naam, double breedtegraad, double lengtegraad, String type, double afstand);
     
 }

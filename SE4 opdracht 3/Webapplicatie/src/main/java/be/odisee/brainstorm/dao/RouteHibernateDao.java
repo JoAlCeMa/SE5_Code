@@ -12,17 +12,19 @@ import be.odisee.brainstorm.domain.Route;
 @Transactional(propagation= Propagation.SUPPORTS, readOnly=true)
 public class RouteHibernateDao extends HibernateDao implements RouteDao {
 
-    public Route saveRoute(int id, String status, String naam, double breedtegraad, double lengtegraad, String type) {
-        Route route = new Route(id, status, naam, breedtegraad, lengtegraad, type);
+    public Route saveRoute(int id, String status, String naam, double breedtegraad, double lengtegraad, String type, double afstand) {
+        Route route = new Route(id, status, naam, breedtegraad, lengtegraad, type, afstand);
         sessionSaveObject(route);
         return route;
     }
-
-    public Route saveRoute(String status, String naam, double breedtegraad, double lengtegraad, String type) {
-        Route route = new Route(status, naam, breedtegraad, lengtegraad, type);
+    
+    @Override
+	public Route saveRoute(String status, String naam, double breedtegraad, double lengtegraad, String type,
+			double afstand) {
+		Route route = new Route(status, naam, breedtegraad, lengtegraad, type, afstand);
         sessionSaveObject(route);
         return route;
-    }
+	}
 
     public Route getRouteById(int routeId) {
         return (Route) sessionGetObjectById("Route", routeId);
@@ -43,7 +45,7 @@ public class RouteHibernateDao extends HibernateDao implements RouteDao {
     }
     
     public void veranderRoute (Route route){
-    	sessionUpdateRouteAlles("Route", route.getId(), route.getNaam(), route.getBreedtegraad(), route.getLengtegraad(), route.getType());
+    	sessionUpdateRouteAlles("Route", route.getId(), route.getNaam(), route.getBreedtegraad(), route.getLengtegraad(), route.getType(), route.getAfstand());
     }
     
     @SuppressWarnings("unchecked")

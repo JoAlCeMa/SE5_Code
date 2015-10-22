@@ -103,8 +103,8 @@ public class BrainstormSessieServiceImpl implements BrainstormSessieService {
     }
     
     @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
-    public Route voegRouteToe(String naam, double breedtegraad, double lengtegraad, String type) {
-        return routeDao.saveRoute("aktief",naam,breedtegraad,lengtegraad,type);
+    public Route voegRouteToe(String naam, double breedtegraad, double lengtegraad, String type, double afstand) {
+        return routeDao.saveRoute("", naam,breedtegraad,lengtegraad,type, afstand);
     }
     
     public void verwijderRoute(int routeId){
@@ -124,14 +124,4 @@ public class BrainstormSessieServiceImpl implements BrainstormSessieService {
     {
     	rolDao.insertRol(id, rechten, username);
     }
-    // TODO deze en andere operaties (ook in andere klassen
-    // met een versie met id en zonder id te refactoren (dubbele code)
-
-    
-
-    // TODO deze en andere operaties (ook in andere klassen
-    // met een versie met id en zonder id te refactoren (dubbele code)
-    
-   
-
 }

@@ -18,9 +18,15 @@
         <c:out value="${route.lengtegraad}" /><br/>
         <b>Type:</b>
         <c:out value="${route.type}" /><br/>
+        <b>Afstand:</b>
+        <c:out value="${route.afstand}" /><br/>
         <br/>
         <c:url var="home" value="/brainstorm/index.html" />
-
         <a href='<c:out value="${home}"/>'>Home</a>
+        <br/>
+        <c:url var="route" value="/brainstorm/veranderRoute.html">
+        	<c:param name="id" value="${route.id}" />
+        </c:url>
+        <a href='<c:out value="${route}"/>'>Verander Route</a>
     </body>
 </html>

@@ -34,6 +34,11 @@
 				<font color="red"><form:errors path="type" /></font>
 			</div>
 			<div>
+				<label>Afstand:</label>
+				<form:input path="afstand" />
+				<font color="red"><form:errors path="afstand" /></font>
+			</div>
+			<div>
 				<input name="submit" type="submit" value="save" />
 			</div>
 		</fieldset>

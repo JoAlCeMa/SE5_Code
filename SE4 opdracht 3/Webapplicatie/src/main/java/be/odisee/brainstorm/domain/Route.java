@@ -43,9 +43,11 @@ public class Route implements Serializable {
     @Column
     private int betrouw;
 
-
 	@Column
 	private int control;
+	
+	@Column
+	private double afstand;
 
 	/*
     // we zullen nu toch een verwijzing naar Persoon in Rol moeten toevoegen
@@ -55,40 +57,42 @@ public class Route implements Serializable {
     public Route(){
 
     }
-
-    public Route(String status, String naam, double lengtegraad, double breedtegraad, String type) {
+    
+    public Route(String status, String naam, double lengtegraad, double breedtegraad, String type, double afstand) {
         this.status = status;
         this.naam = naam;
         this.lengtegraad = lengtegraad;
         this.breedtegraad = breedtegraad;
         this.type = type;
+        this.afstand = afstand;
     }
- 
- public Route(int id, String status, String naam, double lengtegraad, double breedtegraad, String type) {
-	 	this.id = id;
-        this.status = status;
+
+
+	public Route(int id, String status, String naam, double breedtegraad, double lengtegraad, String type, double afstand) {
+		this.id = id;
+		this.status = status;
         this.naam = naam;
         this.lengtegraad = lengtegraad;
         this.breedtegraad = breedtegraad;
         this.type = type;
-    }
+        this.afstand = afstand;
+	}
 
-
- public int getId() {
-     return id;
- }
-
-
-public String getNaam() {
-     return naam;
- }
-
-public String getStatus() {
-	 return status;
-}
-
-public double getLengtegraad() {
-		return lengtegraad;
+	public int getId() {
+	    return id;
+	}
+	
+	
+	public String getNaam() {
+	     return naam;
+	}
+	
+	public String getStatus() {
+		 return status;
+	}
+	
+	public double getLengtegraad() {
+			return lengtegraad;
 	}
 
 	public void setLengtegraad(double lengtegraad) {
@@ -141,5 +145,11 @@ public double getLengtegraad() {
 		this.control = control;
 	}
 	
-	
+	public double getAfstand() {
+		return control;
+	}
+
+	public void setAfstand(double afstand) {
+		this.afstand = afstand;
+	}
 }

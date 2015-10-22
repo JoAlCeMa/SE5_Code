@@ -147,9 +147,9 @@ class HibernateDao {
     	}
     }
     	
-    	 protected void sessionUpdateRouteAlles(String classname, int id, String naam, double breedtegraad, double lengtegraad, String type){
+    	 protected void sessionUpdateRouteAlles(String classname, int id, String naam, double breedtegraad, double lengtegraad, String type, double afstand){
     		 try{
-    			 Query q = sessionFactory.getCurrentSession().createQuery("update " + classname + " set naam= '" +naam + "' ,breedtegraad= " + breedtegraad + " ,lengtegraad= " + lengtegraad+ " ,type= '"+ type+ "',betrouw= "+ 0 + ",control=" + 0 +" where id = " + id);
+    			 Query q = sessionFactory.getCurrentSession().createQuery("update " + classname + " set naam= '" +naam + "' ,breedtegraad= " + breedtegraad + " ,lengtegraad= " + lengtegraad+ " ,type= '" +type + "' ,afstand= " + afstand + ",betrouw= "+ 0 + ",control=" + 0 +" where id = " + id);
     	    	    q.executeUpdate();
     		 }
     		 catch (Exception e){

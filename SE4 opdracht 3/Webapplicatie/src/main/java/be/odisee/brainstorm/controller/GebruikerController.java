@@ -63,6 +63,7 @@ public class GebruikerController {
     	deroute.setBreedtegraad(route.getBreedtegraad());
     	deroute.setLengtegraad(route.getLengtegraad());
     	deroute.setType(route.getType());
+    	deroute.setAfstand(route.getAfstand());
         brainstormSessieService.veranderRoute(deroute);
         System.out.println("DEBUG route verander id: "+deroute.getNaam());
         return "/brainstorm/index";
@@ -79,12 +80,14 @@ public class GebruikerController {
     @RequestMapping(value={"/brainstorm/nieuweRoute.html"},method=RequestMethod.POST)
     public String persoonToevoegen(@ModelAttribute("deroute") Route route, ModelMap model){
     	
-        Route toegevoegdPersoon = brainstormSessieService.voegRouteToe(route.getNaam(),
+        Route nieuweRoute = brainstormSessieService.voegRouteToe(route.getNaam(),
                                                                             route.getBreedtegraad(),
                                                                             route.getLengtegraad(),
-                                                                            route.getType());
+                                                                            route.getType(),
+                                                                            route.getAfstand());
         System.out.println("DEBUG routegegevens naam: "+route.getNaam());
-        return "redirect:/brainstorm/route.html?id="+toegevoegdPersoon.getId();
+        System.out.println("DEBUG routegegevens afstand: "+route.getAfstand());
+        return "redirect:/brainstorm/route.html?id="+nieuweRoute.getId();
     }
     // je zal naar de detailpagina van de toegevoegde route gaan
 }

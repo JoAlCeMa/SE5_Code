@@ -18,6 +18,8 @@
         <c:out value="${route.lengtegraad}" /><br/>
         <b>Type:</b>
         <c:out value="${route.type}" /><br/>
+        <b>Afstand:</b>
+        <c:out value="${route.afstand}" /><br/>
         <br/>
         <c:url var="home" value="/field/home.html" />
         <c:url var="verwijder" value="/field/verwijderRoute.html" >
