@@ -32,7 +32,6 @@ public class GebruikerZietRouteInLijst extends SeleneseTestCase {
 		selenium.waitForPageToLoad("30000");
 		selenium.click("css=input[type=\"submit\"]");
 		selenium.waitForPageToLoad("30000");
-
 	}
 
 	@After

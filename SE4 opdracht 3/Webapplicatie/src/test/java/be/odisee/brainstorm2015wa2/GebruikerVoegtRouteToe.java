@@ -16,7 +16,7 @@ public class GebruikerVoegtRouteToe extends SeleneseTestCase {
 
 	@Test
 	public void testGebruikerVoegtRouteToe() throws Exception {
-	
+
 		selenium.open("/brainstorm2015WA3/login.html");
 		selenium.type("id=username", "");
 		selenium.type("id=username", "ayoub@telenet.be");

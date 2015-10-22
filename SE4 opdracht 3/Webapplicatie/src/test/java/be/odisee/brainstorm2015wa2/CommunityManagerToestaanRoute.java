@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 import java.util.regex.Pattern;
 
 public class CommunityManagerToestaanRoute extends SeleneseTestCase {
+
 	@Before
 	public void setUp() throws Exception {
 		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost:8080/");
@@ -32,7 +33,6 @@ public class CommunityManagerToestaanRoute extends SeleneseTestCase {
 		selenium.waitForPageToLoad("30000");
 		selenium.click("css=input[type=\"submit\"]");
 		selenium.waitForPageToLoad("30000");
-		
 	}
 
 	@After
