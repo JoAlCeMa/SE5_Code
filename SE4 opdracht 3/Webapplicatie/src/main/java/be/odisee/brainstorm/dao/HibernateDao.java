@@ -146,6 +146,16 @@ class HibernateDao {
     		e.printStackTrace();
     	}
     }
+    
+    protected void sessionDeleteObjectByPersoonId(String classname, int id){
+    	try{
+    	    Query q = sessionFactory.getCurrentSession().createQuery("delete " + classname + " where persoon_id = " +id);
+    	    q.executeUpdate();
+    	}
+    	catch (Exception e){
+    		e.printStackTrace();
+    	}
+    }
     	
     	 protected void sessionUpdateRouteAlles(String classname, int id, String naam, double breedtegraad, double lengtegraad, String type, double afstand){
     		 try{

@@ -42,6 +42,7 @@ public class PersoonHibernateDao extends HibernateDao implements PersoonDao {
 
 	@Override
 	public void deletePersoon(int id) {
+		sessionDeleteObjectByPersoonId("Rol", id);
 		sessionDeleteObject("Gebruiker", id);
 	}
 }

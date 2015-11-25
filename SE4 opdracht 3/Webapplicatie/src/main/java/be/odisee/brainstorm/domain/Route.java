@@ -146,7 +146,7 @@ public class Route implements Serializable {
 	}
 	
 	public double getAfstand() {
-		return control;
+		return afstand;
 	}
 
 	public void setAfstand(double afstand) {

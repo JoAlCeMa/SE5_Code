@@ -18,8 +18,8 @@ public class DataConfig {
         BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUrl("jdbc:mysql://localhost:3306/dbtomtom");
-        ds.setUsername("tomtom");
-        ds.setPassword("tomtom");
+        ds.setUsername("root");
+        ds.setPassword("");
         ds.setInitialSize(5);
         ds.setMaxActive(10);
         ds.setDefaultTransactionIsolation(java.sql.Connection.TRANSACTION_SERIALIZABLE);
