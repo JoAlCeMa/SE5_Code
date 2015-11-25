@@ -13,6 +13,7 @@
         <b>Breedtegraad:</b><span><c:out value="${route.breedtegraad}"/></span><br/>
         <b>Lengtegraad:</b><span><c:out value="${route.lengtegraad}"/></span><br/>
         <b>Type:</b><span><c:out value="${route.type}"/></span><br/>
+        <b>Afstand:</b><span><c:out value="${route.afstand}" /></span><br/>
         <br/>
         <c:url var="home" value="/brainstorm/index.html" />
         <a href='<c:out value="${home}"/>'>Home</a>
