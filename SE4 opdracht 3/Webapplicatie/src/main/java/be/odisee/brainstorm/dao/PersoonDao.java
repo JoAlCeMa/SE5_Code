@@ -8,6 +8,8 @@ public interface PersoonDao {
     public Gebruiker savePersoon(int id, String status, String voornaam, String familienaam, String emailadres, String paswoord);
 
     public Gebruiker savePersoon(String string, String voornaam, String familienaam, String emailadres, String paswoord);
+    
+    public void deletePersoon(int id);
 
     public Gebruiker getPersoonById(int persoonId);
 

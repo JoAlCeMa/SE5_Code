@@ -8,8 +8,8 @@ public class UCT_RouteToevoegen extends SeleneseTestCase {
 	}
 	public void testUCT_RouteToevoegen() throws Exception {
 		selenium.open("/brainstorm2015WA3/login.html");
-		selenium.type("id=username", "tom@mail.com");
-		selenium.type("id=password", "TomRiles1");
+		selenium.type("id=username", "gebr@mail.com");
+		selenium.type("id=password", "test12");
 		selenium.click("id=submit");
 		selenium.waitForPageToLoad("30000");
 		selenium.click("link=Gebruiker");

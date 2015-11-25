@@ -8,26 +8,11 @@
     
     <body>
         <h1>Details van route</h1>
-<<<<<<< HEAD
-        <b>Id:</b>
-        <c:out value="${route.id}" /><br/>
-        <b>Naam:</b>
-        <c:out value="${route.naam}" /><br/>
-        <b>Breedtegraad:</b>
-        <c:out value="${route.breedtegraad}" /><br/>
-        <b>Lengtegraad:</b>
-        <c:out value="${route.lengtegraad}" /><br/>
-        <b>Type:</b>
-        <c:out value="${route.type}" /><br/>
-        <b>Afstand:</b>
-        <c:out value="${route.afstand}" /><br/>
-=======
         <b>Id:</b><span><c:out value="${route.id}"/></span><br/>
         <b>Naam:</b><span><c:out value="${route.naam}"/></span><br/>
         <b>Breedtegraad:</b><span><c:out value="${route.breedtegraad}"/></span><br/>
         <b>Lengtegraad:</b><span><c:out value="${route.lengtegraad}"/></span><br/>
         <b>Type:</b><span><c:out value="${route.type}"/></span><br/>
->>>>>>> origin/master
         <br/>
         <c:url var="home" value="/organisator/home.html" />
         <c:url var="verwijder" value="/organisator/verwijderRoute.html" >

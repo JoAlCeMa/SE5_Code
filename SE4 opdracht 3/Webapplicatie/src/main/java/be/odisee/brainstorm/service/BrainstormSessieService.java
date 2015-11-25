@@ -42,6 +42,8 @@ public interface BrainstormSessieService {
     
     public void verwijderRoute(int routeId);
     
+    public void verwijderPersoon(int id);
+    
     public void routeBetrouwOk(int id);
     
     public void routecontrolOk(int id);

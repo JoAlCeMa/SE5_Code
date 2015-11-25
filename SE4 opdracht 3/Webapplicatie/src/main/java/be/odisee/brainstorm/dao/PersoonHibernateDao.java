@@ -40,4 +40,8 @@ public class PersoonHibernateDao extends HibernateDao implements PersoonDao {
         sessionUpdateObject(persoon);
     }
 
+	@Override
+	public void deletePersoon(int id) {
+		sessionDeleteObject("Gebruiker", id);
+	}
 }

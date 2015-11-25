@@ -39,11 +39,15 @@ public class BrainstormSessieServiceImpl implements BrainstormSessieService {
     }
 
     public Gebruiker voegPersoonToe(int id, String voornaam, String familienaam, String emailadres, String paswoord) {
-        return persoonDao.savePersoon(id,"actief",voornaam,familienaam,emailadres,paswoord);
+        return persoonDao.savePersoon(id,"Actief",voornaam,familienaam,emailadres,paswoord);
     }
 
     public Gebruiker voegPersoonToe(String voornaam, String familienaam, String emailadres, String paswoord) {
-        return persoonDao.savePersoon("aktief",voornaam,familienaam,emailadres,paswoord);
+        return persoonDao.savePersoon("Actief",voornaam,familienaam,emailadres,paswoord);
+    }
+    
+    public void verwijderPersoon(int id) {
+    	persoonDao.deletePersoon(id);
     }
 
     public Gebruiker zoekPersoonMetId(int id){

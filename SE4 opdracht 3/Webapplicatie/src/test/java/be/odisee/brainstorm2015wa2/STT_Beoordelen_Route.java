@@ -8,8 +8,8 @@ public class STT_Beoordelen_Route extends SeleneseTestCase {
 	}
 	public void testSTT_Beoordelen_Route() throws Exception {
 		selenium.open("/brainstorm2015WA3/login.html");
-		selenium.type("id=username", "a@a.com");
-		selenium.type("id=password", "aaaaaa");
+		selenium.type("id=username", "gebr@mail.com");
+		selenium.type("id=password", "test12");
 		selenium.click("id=submit");
 		selenium.waitForPageToLoad("30000");
 		selenium.click("link=Gebruiker");
@@ -42,8 +42,8 @@ public class STT_Beoordelen_Route extends SeleneseTestCase {
 		selenium.waitForPageToLoad("30000");
 		selenium.click("link=Log opnieuw in");
 		selenium.waitForPageToLoad("30000");
-		selenium.type("id=username", "com@com.com");
-		selenium.type("id=password", "com123");
+		selenium.type("id=username", "com@mail.com");
+		selenium.type("id=password", "test12");
 		selenium.click("id=submit");
 		selenium.waitForPageToLoad("30000");
 		selenium.click("link=Community");

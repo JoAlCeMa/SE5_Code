@@ -127,7 +127,7 @@ public class Gebruiker implements Serializable {
         if (type.toLowerCase().equals("administrator")) newRol= new Administrator(status, usernaam);
         if (type.toLowerCase().equals("organisator")) newRol= new Community(status, usernaam);
         if (type.toLowerCase().equals("facilitator")) newRol= new Field(status, usernaam);
-        if (type.toLowerCase().equals("deelnemer")) newRol= new Deelnemer(status, usernaam);
+        //if (type.toLowerCase().equals("deelnemer")) newRol= new Deelnemer(status, usernaam);
         if (newRol==null) throw new RolNotFoundException("Type "+type+" is geen bekende Rol");
         m_Rollen.add(newRol);
         return newRol;
