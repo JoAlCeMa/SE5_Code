@@ -13,6 +13,11 @@ public class ListUsersPage extends AbstractPage {
 		return new UserDetailsPage(driver);
 	}
 	
+	public NewUserPage chooseAddUser() {
+		driver.findElement(By.linkText("Persoon Toevoegen")).click();
+		return new NewUserPage(driver);
+	}
+	
 	public String getTitle() {
 		return driver.findElement(By.tagName("h1")).getText();
 	}
